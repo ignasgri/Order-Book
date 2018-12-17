@@ -1,0 +1,1 @@
+c:\Users\ignas\virtualenvs\order_book\Scripts\activate
