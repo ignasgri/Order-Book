@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+    <title>Order Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            
+                <div class="panel-body">
+                    {% if messages %}
+                        <div class="alert alert-success">
+                            <div class="messages">
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+              <h1> TechMonster <img src="https://d1e6a3jvdxo3ln.cloudfront.net/images/logos/techhub_3d_logo_png.png" alt="monster" height=80px>
+                    <p id="logo" class="lead"></p>
+                </h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            
+                {% comment %} <div class="panel-body"> {% endcomment %}
+                    <!--blog entries-->
+                    {% block content %}
+                    {% endblock %}
+                    <!--blog entries-->
+                {% comment %} </div> {% endcomment %}
+            
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        
+        </div>
+</footer>
+<!-- script references -->
+    <script rel="stylesheet" src="{% static 'js/style.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</body>
+</html>

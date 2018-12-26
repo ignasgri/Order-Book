@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles%}
+
+
+{% block content %}
+this is my site!
+ <form class="contact_container" role="form" action="" method="POST">
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                                               
+
+                <button class="get_in_touch_button" type="submit"><img class="image_design_dev" src="{% static "images/svg/envelope.svg" %}" style="width:20px;color:gray;" alt="My image"/> Send message</button>
+            </form>
+{% endblock %}
+
+</div>
+{% endblock %}

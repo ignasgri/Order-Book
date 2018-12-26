@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles%}
+
+
+{% block content %}
+this is my site!
+
+ <button class="btn btn-default new" onclick="location.href='{% url 'new_turkey_order' %}'">New Post</button></p>
+{% endblock %}

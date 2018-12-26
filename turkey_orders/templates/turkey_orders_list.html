@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+    {% for order_details in all_turkey_orders %}
+    <div class="blog-panel">
+        <div class="row">
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="#">
+                    {% comment %} <img src="{% gravatar_url post.author.email %}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle"> {% endcomment %}
+                </a>
+                {% comment %} <h6>Author: {{post.author}}</h6> {% endcomment %}
+            </div>
+            <div class="col-md-10 col-sm-9">
+                {% comment %} <h3 class="post-title">{{ post.title }}</h3> {% endcomment %}
+                {% comment %} {% if post.image %}
+                           <img class="blogimages" src="{{MEDIA_URL}}{{ post.image}}">
+                            {% endif %} {% endcomment %}
+                <div class="row">
+                    <div class="col-xs-12 col-sl-12 col-md-9 col-lg-9 blog-posts">
+                        <p>{{ order_details.name }}</p>
+                        <p>{{ order_details.phone_number }}</p>
+                        <p>{{ order_details.address }}</p>
+                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}" >Read More</button>
+                        <button class="btn btn-default new" onclick="location.href='{% url 'new_post' %}'">New Post</button></p>
+                        <div class="tags">
+                            <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+{% endblock %}
