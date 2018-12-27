@@ -47,8 +47,8 @@ collection_date = (
     ('23', '23RD'),
     ('24', '24TH'),
     ('29', '29ND'),
-    ('30', '22ED'),
-    ('31', '22ST'),
+    ('30', '30TH'),
+    ('31', '31ST'),
 )
 
 class Turkey_Orders(models.Model):

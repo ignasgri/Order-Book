@@ -4,7 +4,50 @@
 
 
 {% block content %}
-this is my site!
 
- <button class="btn btn-default new" onclick="location.href='{% url 'new_turkey_order' %}'">New Post</button></p>
+<div class="row">
+    <div class="col-sm-12 text-center">
+<p>Turkey Orders logo</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+        <input class="search_field" type=input></input>
+        </div>
+    </div>
+
+  <div class="row">
+    <div class="col">
+      <button class="new_turkey_order_button" onclick="location.href='{% url 'new_turkey_order' %}'">New Turkey Order</button></p>
+    </div>
+    <div class="col">
+            <button class="new_turkey_order_button" onclick="location.href='{% url 'new_turkey_order' %}'">New Spiced Beef Order</button></p>
+    </div>
+    <div class="col">
+            <button class="new_turkey_order_button" onclick="location.href='{% url 'new_turkey_order' %}'">New Ham Order</button></p>
+    </div>
+    <div class="col">
+            <button class="new_turkey_order_button" onclick="location.href='{% url 'new_turkey_order' %}'">New Duck/Goose Order</button></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+       <button class="turkey_order_list_button" onclick="location.href='{% url 'turkey_order_list' %}'">All Turkey Orders</button></p>
+    </div>
+    <div class="col">
+            <button class="turkey_order_list_button" onclick="location.href='{% url 'turkey_order_list' %}'">All Spiced Beef Orders</button></p>
+    </div>
+    <div class="col">
+        <button class="turkey_order_list_button" onclick="location.href='{% url 'turkey_order_list' %}'">All Ham Orders</button></p>
+    </div>
+        <div class="col">
+            <button class="turkey_order_list_button" onclick="location.href='{% url 'turkey_order_list' %}'">All Duck/Goose Orders</button></p>
+    </div>
+  </div>
+</div>
+
+
+
 {% endblock %}
